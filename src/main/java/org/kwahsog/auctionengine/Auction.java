@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 /**
  * Implementation of the AuctionableItem interface. 
- * Provides constuctor for an Auction on a given item, allowing bids to be made and bid information to be retrieved.
+ * Provides constructor for an Auction on a given item, allowing bids to be made and bid information to be retrieved.
  * @author Alex
  *
  */
@@ -35,6 +35,11 @@ public class Auction implements Auctionable {
 	}
 	
 	public BidResult makeBid(Bid myBid) {
+		
+		if (myBid.getPrice() < 0) {
+			return BidResult.BID_NEGATIVE;
+		}
+		
 		if (bids.size() > 0) {
 			if (bids.getLast().getPrice() < myBid.getPrice()) {
 				bids.add(myBid);

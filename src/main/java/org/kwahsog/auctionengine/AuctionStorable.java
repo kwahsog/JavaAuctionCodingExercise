@@ -11,13 +11,13 @@ public interface AuctionStorable {
 	
 	/**
 	 * Creates new auction and stores it internally.
-	 * @param auction
+	 * @param auction Auction to add.
 	 */
 	public void createAuction(Auction auction);
 	
 	/**
 	 * Removes a given auction from the storage.
-	 * @param id
+	 * @param id id of Auction to delete.
 	 */
 	public void deleteAuction(int id);
 	

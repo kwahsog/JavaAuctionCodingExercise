@@ -30,7 +30,6 @@ public class AuctionTest {
 
 	@Test
 	public void testAuctionConstructor() {
-		assertEquals(TestUserTwo.getId(),2);//todo: delete
 		assertEquals(firstAuction.getId(), 1);
 		assertEquals(firstAuction.getItem(), TestItemOne);
 	}
@@ -56,13 +55,15 @@ public class AuctionTest {
 		Bid firstBid = new Bid(TestUserOne, 20.00);
 		Bid secondBid = new Bid(TestUserTwo, 20.00);
 		Bid thirdBid = new Bid(TestUserThree, 10.00);
+		Bid negativeBid = new Bid(TestUserThree, -10.00);
 		assertEquals(firstAuction.makeBid(firstBid), BidResult.BID_SUCCESSFUL);
 		assertEquals(firstAuction.makeBid(secondBid), BidResult.BID_TOO_LOW);
 		assertEquals(firstAuction.makeBid(thirdBid), BidResult.BID_TOO_LOW);
+		assertEquals(firstAuction.makeBid(negativeBid), BidResult.BID_NEGATIVE);
 	}
 	
 	/*
-	 *	Testing requirement 2 " Get the current winning bid for an item" 
+	 *	Testing requirement 2 "Get the current winning bid for an item" 
 	 */
 	@Test
 	public void testAuctionWinningBids() {

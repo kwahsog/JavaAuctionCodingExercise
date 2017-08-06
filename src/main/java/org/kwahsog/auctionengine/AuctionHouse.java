@@ -3,8 +3,6 @@ package org.kwahsog.auctionengine;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,8 +13,6 @@ import java.util.Map;
  */
 public class AuctionHouse implements AuctionStorable {
 
-	//private Map<User,ArrayList<Item>> userBiddedOnItems = new HashMap<User,ArrayList<Item>>();
-	//private ArrayList<Auction> auctions;
 	private Map<Integer, Auction> auctions = new HashMap<Integer,Auction>();
 	
 	public void createAuction(Auction auction) {
@@ -40,7 +36,6 @@ public class AuctionHouse implements AuctionStorable {
 		while (it.hasNext()) {
 			Map.Entry<Integer, Auction> pair = it.next();
 			Auction tempAuctions = pair.getValue();
-			//LinkedList<Bid> tempBids = tempAuctions.getAllBids();
 			for (Bid bid: tempAuctions.getAllBids()) {
 				if (bid.getUser().getId() == user.getId()) {
 					items.add(tempAuctions.getItem());

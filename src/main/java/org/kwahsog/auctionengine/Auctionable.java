@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public interface Auctionable {
 	
-	public enum BidResult { BID_SUCCESSFUL, AUCTION_ENDED, BID_TOO_LOW};
+	public enum BidResult { BID_SUCCESSFUL, AUCTION_ENDED, BID_TOO_LOW, BID_NEGATIVE};
 	
 	/** 
 	 * Records a user's bid on an item as part of an auction, evaluating success of the bid.
@@ -29,7 +29,7 @@ public interface Auctionable {
 	/**
 	 * Returns all bids for a specific item in an auction.
 	 * 
-	 * @return all bids.
+	 * @return LinkedList of all bids.
 	 */
 	public LinkedList<Bid> getAllBids();
 }
