@@ -15,9 +15,9 @@ import org.kwahsog.auctionengine.User;
 
 public class AuctionTest {
 
-	User TestUserOne, TestUserTwo, TestUserThree;
-	Item TestItemOne, TestItemTwo;
-	Auction firstAuction;
+	private User TestUserOne, TestUserTwo, TestUserThree;
+	private Item TestItemOne;
+	private Auction firstAuction;
 	
 	@Before
 	public void initialize() throws Exception {
@@ -30,6 +30,7 @@ public class AuctionTest {
 
 	@Test
 	public void testAuctionConstructor() {
+		assertEquals(TestUserTwo.getId(),2);//todo: delete
 		assertEquals(firstAuction.getId(), 1);
 		assertEquals(firstAuction.getItem(), TestItemOne);
 	}
@@ -103,7 +104,6 @@ public class AuctionTest {
 		TestUserTwo = null;
 		TestUserThree = null;
 		TestItemOne = null;
-		TestItemTwo = null;
 		firstAuction = null;
     }   
 
