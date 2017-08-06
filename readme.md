@@ -8,4 +8,4 @@ The exercise has been completed using Java 8, JUnit for tests and Maven for depe
 
 ## Possible extensions
 
-Natural improvements to the project could be made, such as creating persistent storage or a web UI.
+Natural improvements to the project could be made, such as creating persistent storage or a web UI. Other possible improvements include adding support for opening and closing auction, or having the auction length be set as a period of time.
