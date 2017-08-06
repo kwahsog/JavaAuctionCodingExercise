@@ -23,6 +23,7 @@ public class Auction implements Auctionable {
 		super();
 		this.id = id;
 		this.item = item;
+		this.bids = new LinkedList<Bid>();
 	}
 	
 	public int getId() {
