@@ -8,7 +8,7 @@ import java.util.LinkedList;
  * @author Alex
  *
  */
-public class Auction implements AuctionableItem {
+public class Auction implements Auctionable {
 	
 	private LinkedList<Bid> bids;	
 	private final int id;

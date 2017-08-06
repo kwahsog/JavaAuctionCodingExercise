@@ -2,7 +2,12 @@ package org.kwahsog.auctionengine;
 
 import java.util.LinkedList;
 
-public interface AuctionableItem {
+/**
+ * Interface for auctionable items.
+ * @author Alex
+ *
+ */
+public interface Auctionable {
 	
 	public enum BidResult { BID_SUCCESSFUL, AUCTION_ENDED, BID_TOO_LOW};
 	
